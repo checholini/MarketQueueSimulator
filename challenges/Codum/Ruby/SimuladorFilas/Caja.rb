@@ -1,6 +1,7 @@
 require_relative "Cliente"
 
 class Caja
+
 	def initialize
 		@nombre = 'C'
 		@ocupada = false
@@ -10,11 +11,11 @@ class Caja
 		@clienteEnCaja = nil
 		
 	end
-	
+	#Retorna la disponibilidad de la caja
 	def isOcupada
 		return @ocupada
 	end
-	
+	#Retorna el tiempo de atención restante en la caja
 	def getTiempoRestante
 		return @tiempoRestante
 	end

@@ -41,7 +41,7 @@ class FilaIndividual
 	#inserta clientes a la cola	
 	def anadirClientes
 	#se genera un random con los clientes
-		nuevosClientesCantidad = rand(0..4)
+		nuevosClientesCantidad = rand(0..6) #numero aleatorio que genera de 0 a 5 clientes por iteracion
 		#se agregan clientes segun el random a una cola
 		for j in 0..nuevosClientesCantidad
 			nuevoCliente = Cliente.new
