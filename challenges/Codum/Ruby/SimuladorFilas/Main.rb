@@ -54,13 +54,13 @@ def printTiempo
 	return val
 end
 
-#pregunta por el delta de tiempo para la simulacion 
+#pregunta por el delta de tiempo para la simulacion
 def printDeltaT
 	puts 'Ingrese el delta de tiempo de la simulación'
 	val = gets.chomp.to_i
 	if val < 0
 		puts 'Valor no valido... intente nuevamente'
-		printTiempo
+		printDeltaT
 	end
 	return val
 end

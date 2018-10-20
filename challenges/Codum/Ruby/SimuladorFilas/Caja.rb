@@ -9,7 +9,7 @@ class Caja
 		@tiempoPromedio = 0
 		@clientesAtendidos = 0
 		@clienteEnCaja = nil
-		
+
 	end
 	#Retorna la disponibilidad de la caja
 	def isOcupada
@@ -19,11 +19,11 @@ class Caja
 	def getTiempoRestante
 		return @tiempoRestante
 	end
-	
+
 	def getNombre
 		return @nombre
 	end
-	
+
 	def atenderCliente clienteEnCaja
 		@ocupada = true
 		@clienteActual = clienteEnCaja
@@ -32,25 +32,28 @@ class Caja
 		@tiempoPromedio += @tiempoRestante
 		@clientesAtendidos += "1.0".to_f
 	end
-	
+
 	def getCliente
 		return @clienteActual
 	end
-	
+
 	def finalizarAtencion
 		@ocupada = false
 	end
-	
+
 	def reducir
     if(@tiempoRestante>0)
       @tiempoRestante = @tiempoRestante-1
 	else
 		finalizarAtencion
     end
-	
+
 	def getPromedio
 		#resta el tiempo que le falto al cliente para salir de la caja
 		@tiempoPromedio -= @tiempoRestante
+		if @clientesAtendidos == 0
+			return "n/a"
+		end
 		return @tiempoPromedio/@clientesAtendidos
 	end
   end
