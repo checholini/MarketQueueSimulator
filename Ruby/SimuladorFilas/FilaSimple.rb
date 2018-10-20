@@ -39,7 +39,8 @@ class FilaSimple
 	#inserta clientes a la cola	
 	def anadirClientes
 	#se genera un random con los clientes
-		nuevosClientes = rand(0..4)
+		nuevosClientes = rand(0..6) #numero aleatorio que genera de 0 a 5 clientes por iteracion
+		#puts nuevosClientes
 		#se agregan clientes segun el random a una cola
 		for j in 0..nuevosClientes
 			@clientesEnCola << Cliente.new
