@@ -121,19 +121,6 @@ class FilaIndividual
 
 	#coloca al cliente en una fila, priorizando las de menos tamaño
 	def asignarMinimo clienteAIngresar
-#		flag = false
-#		#Si hay cajas vacias y no hay fila, atiende automaticamente al cliente
-#		for i in 0..@cajasMercado.length-1
-#			if !@cajasMercado[i].isOcupada && @hashCajasFila.fetch(i).empty?
-#				@cajasMercado[i].atenderCliente clienteAIngresar
-#				flag = true
-#				break
-#			end
-#		end
-		#revisa si el cliente se añadio directamente a la caja
-#		if flag
-
-#		else
 			#Escoge un valor aleatorio para posicionar al cliente
 			val = rand(0..@hashCajasFila.length-1)
 			min = @hashCajasFila.fetch(val).length
@@ -148,8 +135,6 @@ class FilaIndividual
 			end
 			#se agrega el cliente a la caja
 			@hashCajasFila.fetch(pos).push clienteAIngresar
-#		end
-
 	end
 
 	#Calcula cual es el maximo tamaño de las filas existentes
